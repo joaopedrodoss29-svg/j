@@ -1,0 +1,17 @@
+{
+  "name": "AD X-RAY",
+  "short_name": "ADX",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0b1020",
+  "theme_color": "#111827",
+  "description": "Análise heurística de anúncios e criativos.",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='32' fill='%230b1020'/%3E%3Ctext x='96' y='112' text-anchor='middle' font-size='96' fill='%237c7cff'%3EAX%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

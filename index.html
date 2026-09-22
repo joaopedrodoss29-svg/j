@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111827" />
+    <meta
+      name="description"
+      content="AD X-RAY — análise heurística de anúncios e criativos."
+    />
+    <title>AD X-RAY</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Competitive Intelligence</p>
+          <h1>AD X-RAY</h1>
+        </div>
+        <button id="install-btn" class="ghost-button" type="button">
+          Instalar app
+        </button>
+      </header>
+
+      <main class="layout">
+        <aside class="panel left-panel">
+          <h2>Adicionar anúncio</h2>
+
+          <form id="ad-form" class="ad-form">
+            <label>
+              Nome
+              <input type="text" name="name" placeholder="Ex: SaaS B2B Jam" required />
+            </label>
+
+            <label>
+              Produto
+              <input type="text" name="product" placeholder="Ex: ferramenta de automação" required />
+            </label>
+
+            <label>
+              Nicho
+              <input type="text" name="niche" placeholder="Ex: marketing digital" required />
+            </label>
+
+            <label>
+              URL
+              <input type="url" name="url" placeholder="https://..." />
+            </label>
+
+            <label>
+              Texto principal
+              <textarea name="copyText" rows="5" placeholder="Cole o anúncio ou a cópia principal..." required></textarea>
+            </label>
+
+            <button type="submit" class="primary-button">Salvar anúncio</button>
+          </form>
+        </aside>
+
+        <section class="panel center-panel">
+          <div class="section-header">
+            <h2>Anúncios</h2>
+            <span id="ad-count" class="badge">0 itens</span>
+          </div>
+          <div id="ad-list" class="ad-list" aria-live="polite"></div>
+        </section>
+
+        <aside class="panel right-panel">
+          <div class="section-header">
+            <h2>Análise</h2>
+          </div>
+
+          <div id="analysis-empty" class="empty-state">
+            Selecione um anúncio para ver a análise heurística.
+          </div>
+
+          <div id="analysis-panel" class="analysis-panel hidden">
+            <div class="analysis-card">
+              <span class="label">Score heurístico</span>
+              <strong id="heuristic-score">0</strong>
+            </div>
+
+            <div class="analysis-group">
+              <h3>Hook</h3>
+              <p id="hook-result"></p>
+            </div>
+
+            <div class="analysis-group">
+              <h3>Ângulo</h3>
+              <p id="angle-result"></p>
+            </div>
+
+            <div class="analysis-group">
+              <h3>Oferta</h3>
+              <p id="offer-result"></p>
+            </div>
+
+            <div class="analysis-group">
+              <h3>Público</h3>
+              <p id="audience-result"></p>
+            </div>
+
+            <div class="analysis-group">
+              <h3>CTA</h3>
+              <p id="cta-result"></p>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
